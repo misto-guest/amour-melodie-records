@@ -6,20 +6,20 @@ export default function Footer() {
   const socialLinks = [
     { name: 'Facebook', url: 'https://facebook.com', icon: '📘' },
     { name: 'Twitter', url: 'https://twitter.com', icon: '🐦' },
-    { name: 'Instagram', url: 'https://instagram.com', icon: '📷' },
     { name: 'LinkedIn', url: 'https://linkedin.com', icon: '💼' },
+    { name: 'Instagram', url: 'https://instagram.com', icon: '📷' },
   ];
 
   const quickLinks = [
     { name: 'Send Your Demo', url: '/demo' },
     { name: 'Contact Us', url: '/contact' },
-    { name: 'Releases', url: '/releases' },
   ];
 
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-gray-800 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-2">
             <div className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-rose-400 bg-clip-text text-transparent mb-4">
@@ -49,6 +49,16 @@ export default function Footer() {
                     World Trade Center Amsterdam<br />
                     8th floor, Strawinskylaan 1<br />
                     1077 XW Amsterdam
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-3">
+                <div className="text-xl">🌐</div>
+                <div>
+                  <div className="font-semibold text-white">Languages</div>
+                  <div className="text-gray-400">
+                    We zijn te bereiken in het Nederlands en Engels!
                   </div>
                 </div>
               </div>
@@ -96,9 +106,9 @@ export default function Footer() {
         {/* Newsletter */}
         <div className="mt-12 p-6 bg-gray-800 rounded-xl">
           <div className="max-w-md mx-auto text-center">
-            <h3 className="text-lg font-semibold text-white mb-2">Subscribe to Our Newsletter</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">Subscribe</h3>
             <p className="text-gray-400 text-sm mb-4">Stay updated with our latest releases and artist news.</p>
-            <form className="flex gap-2">
+            <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -116,9 +126,10 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
-          <p>© {currentYear} Amour Melodie Records. All Rights Reserved.</p>
+          <p>© {currentYear} Amour Melodie Records All Rights Reserved.</p>
           <div className="mt-2 space-x-4">
             <Link href="/privacy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link>
+            <span>|</span>
             <Link href="/terms" className="hover:text-amber-400 transition-colors">Terms of Service</Link>
           </div>
         </div>
