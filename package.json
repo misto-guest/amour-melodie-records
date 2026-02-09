@@ -1,0 +1,11 @@
+{
+  "name": "amour-melodie-records",
+  "version": "1.0.0",
+  "description": "Amsterdam's Premier Piano Label",
+  "scripts": {
+    "build": "echo 'Static site - no build required'"
+  },
+  "keywords": ["piano", "music", "label", "amsterdam"],
+  "author": "Amour Melodie Records",
+  "license": "MIT"
+}
